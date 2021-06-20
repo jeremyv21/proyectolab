@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript - parte 3</title>
+    <script type="text/javascript">
+    //condicionales anidadas
+    //las condicionales anidadas te permite evaluar mas de una condicion a la vez,
+    //en diferentes estructuras if.
+    //sintaxis
+    //if(condicion1){
+    //   ...programas..
+    //}else{
+    //   if(condicion2)
+    //  ...programas..
+    //if(condicion3){
+    //   ...programas..
+    //}else{
+    //   if(condicion4)
+    
+    //ejemplo 1
+    //desarrollar una aplicacion que permita calcular el sueldo final de un trabajador si se 
+    //sabe que su sueldo basico se ingresa por teclado. adicional a eso se le va a calcular
+    //una bonificacion y un descuento dependiendo de la categoria a la cual pertenece , tal
+    //como se muestra a continuacion:
+    //categoria  bonificacion  descuento
+    //A            7%            5%
+    //B            9%            7%
+    //C            11%           9%
+    //Mostrar todos los resultados
+    //¿cuantas variables necesito?
+    //5
+    //¿que tipo de datos necesito?
+    //real, texto
+    //¿cuales son las variables que necesito?
+    //sbt, bon, des, sf, cat
+    //¿que variables voy a leer?
+    //sb , cat
+    //definiendo e iniciando valores 
+    var sb=0, bon=0, des=0, sf=0, cat="";
+    //capturando valores
+    sb=parseFloat(prompt("ingrese el sueldo basico del trabajador"));
+    cat=parseFloat("ingrese la categoria: [a] o [b] o [c]")
+    //condicion
+    if(cat=="a"){
+        bon=sb*0.07;
+        des=sb*0.05;
+    }else{
+        if(cat=="b"){
+            bon=sb*0.09
+            des=sb*0.07
+        }else{
+            if(cat=="c"){
+                bon=sb*0.11;
+                des=sb*0.09;
+            }else{
+                bon=0;
+                des=0;
+            }
+        }
+    }
+
+    sf=sb+bon-des;
+    //mostrando resultados
+    alert("el sueldo basico es:"+sb);
+    alert("la bonificacion es:"+bon);
+    alert(" el descuento es:")+des;
+    alert("el sueldo final es."+sf);
+
+    //ejemplo2
+    //desarrollar una aplicacion que permita ingrear el precio de un producto y la cantidad
+    //a comprar y dependiendo la categoria se aplicara un descuendo del subtotal , tal como 
+    //se muestra a continuacion 
+    //categoria  descuento 
+    //1             3%
+    //2             5%
+    //3             7%
+    //4             9%
+    //mostrar todos los resultados 
+    //¿cuantas variables necesito
+    //6
+    //¿que tipo de datos necesito?
+    //real, entero
+    //¿cuales son las variables que necesito?
+    //pre, can, sbt, des, tot, cat
+    //¿que variables voy a leer?
+    //pre, can, cat
+    //definiendo e iniciando variables
+    var pre=0, can=0, sbt=0, des=0, tot=0, cat=0;
+    //capturando valores
+    pre=parseFloat(prompt("ingrese el precio del valor:"));
+    can=parseint(prompt("ingrese la cantidad de productos a comprar:"));
+    cat=parseint(prompt("ingrese la categoria : [1] o [2] o [3] o [4]"));
+    //realizando operaciones
+    sbt=pre*can;
+    //condicion
+    if(cat==1){
+        des=sbt*0.03;
+    }else{
+        if(cat==2){
+            des=sbt*0.05;
+        }else{
+            if(cat==3){
+                des=sbt*0.07;
+            }else{
+                if(cat==4){
+                    des=sbt*0.09;
+                }else{
+                    des=0;
+                }
+            }
+        }
+    }
+    tot=sbt-des
+    //mostrando resultados
+    document.write("el subtotal es:"+sbt+"<br>");
+    document.write("el descuento es:"+des+"<br>");
+    document.write("el total es :"+tot+"<br>");
+    document.write("<hr>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

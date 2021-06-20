@@ -1,0 +1,21 @@
+li {
+  display: inline;
+}
+
+span {
+  display: block;
+}
+
+a {
+  display: block;
+}
+
+p span {
+  display: inline-block;
+  width: 25%;
+}
+
+.elementolista p {
+  display: list-item;
+  margin-left: 50px;
+}

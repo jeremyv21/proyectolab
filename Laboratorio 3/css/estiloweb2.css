@@ -1,0 +1,28 @@
+body {
+  background-color: rgb(227, 227, 235);
+}
+.cajita {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.flexible3 h3,
+p,
+ul {
+  width: 200px;
+  border: black 1px solid;
+  margin: 2px;
+  text-align: right;
+}
+body {
+  background-color: rgb(6, 202, 236);
+}
+
+.contenedor {
+  background-color: white;
+}
+.Informacionsobreelproducto {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+}

@@ -1,0 +1,26 @@
+ul {
+  background-color: cornflowerblu;e padding: 10px;
+  list-s tyle-type: square; list-s tyle-positio:n inside;
+  }
+  
+  ul li	{
+  background-color: cornsilk; margin: 3px;
+  }
+  
+  ul li ul {
+  background-color: cyan; padding: 10px;
+  list-s tyle-type: circle; list-s tyle-positio:n outside;
+  }
+  
+  ul li	ul li	{
+  background-color: darkkhak i; margin: 3px;
+  }
+  
+  ul li ul li ul { background-color: coral; list-s tyle-type: disc;
+  list-s tyle-positio:n inside; padding: 10px;
+  }
+  
+  ul li ul li ul li { background-color: crimson; color: whitesmoke;
+  }
+  
+  

@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(227, 227, 235);
+}
+.cajita {
+  display: flex;
+  flex-direction: column;
+}
+.flexible3 h3,
+p,
+ul {
+  width: 200px;
+  border: black 1px solid;
+  margin: 2px;
+}

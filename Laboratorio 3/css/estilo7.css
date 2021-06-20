@@ -1,0 +1,67 @@
+* {
+  padding: 10px;
+}
+
+body {
+  background-color: coral;
+}
+
+.contenedor {
+  background-color: whitesmoke;
+}
+
+/* Agregamos color al texto del parrafo */
+.parrafocolor {
+  color: yellowgreen;
+}
+
+/* Alineamos el parrafo */
+.parrafoderecha {
+  text-align: right;
+}
+
+.parrafocentro {
+  text-align: center;
+}
+
+.parrafoizquierda {
+  text-align: left;
+}
+
+.parrafojustificado {
+  text-align: justify;
+}
+
+.parrafosuperior {
+  vertical-align: top;
+}
+
+.parrafomedio {
+  vertical-align: middle;
+}
+
+.parrafoinferior {
+  vertical-align: bottom;
+}
+
+/* Agregamos decoraciones al texto */
+.parrafosobrelinea {
+  text-decoration: overline;
+}
+
+.parrafosubrayado {
+  text-decoration: underline;
+}
+
+.parrafotachado {
+  text-decoration: line-through;
+}
+
+/* Agregamos transformaciones al texto del parrafo */
+.parrafomayuscula {
+  text-transform: uppercase;
+}
+
+.parrafominuscula {
+  text-transform: lowercase;
+}

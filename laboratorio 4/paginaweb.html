@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="descripton" content="">
+    <meta name="keywords" content="">
+    <title>Ropa Casual</title>
+    <link rel="stylesheet" type="text/css" href="css/cssestilo.css">
+    <title>Javascript - Parte 4</title>
+    <script type="text/javascript">
+        // Trabajo con formularios
+        // Cuando queremos cambiar y dejar de utilizar los alert y los document podemos
+        // utilizar formularios <form></form> para poder ingresar, mostrar, realizar operaciones, etc
+        // Es importante que los controles que se agreguen al formulario siempre tengan dos atributos 
+        // importantes: id y name
+        // Controles dentro del formulario
+        // Label --> Etiqueta --> permite escribir un valor en formulario, eso quiere decir que sirve
+        // para mostrar texto en el formulario
+        // <label for=""></label>
+        // for="": indica a que control esta relacionado el label
+        // Input: Text
+        // Input: Text --> Caja de texto, permite ingresar y mostrar valores
+        // Todo valor que se ingrese en la caja de texto sera convertido en texto automaticamente
+        // para recuperar algun valor numerico es necesario hacer conversiones utilizando parseInt o parseFloat
+        // <input type="text" name="" id="">
+        // Input: Button
+        // Input: Button --> boton --> permite ejecutar una accion, por lo general este control va a llamar al
+        // Javascript para que tenga alguna acción específica
+
+        // Ejemplo 1
+        // Desarrollar una aplicacion que te permita ingresar dos numeros y luego permita calcular 
+        // las operaciones basicas
+        // ¿Cuantas variables necesito?
+        // 6
+        // ¿Que tipo de datos necesito?
+        // Real
+        // ¿Cuales son las variables que necesito?
+        // n1, n2, sum, res, mul, div
+        // ¿Que variables voy a leer?
+        // n1, n2
+        // Declarando funciones
+        function CalculaSuma(num1,num2){
+            return num1+num2;
+        }
+        function CalculaResta(num1,num2){
+            return num1-num2;
+        }
+        function CalculaMultiplicación(num1,num2){
+            return num1*num2;
+        }
+        function CalculaDivisión(num1,num2){
+            return num1/num2;
+        }
+         // Definiendo e Inicializando variables
+        var n1=0, n2=0, sum=0, res=0, mul=0, div=0;
+        // Capturando valores
+        n1=parseFloat(document.getElementById("txtN1").value);
+        n2=parseFloat(document.getElementById("txtN2").value);
+        // Llamando a las funciones para calcular
+        sum=CalculaSuma(n1,n2);
+        res=CalculaResta(n1,n2);
+        mul=CalculaMultiplicación(n1,n2);
+        div=CalculaDivisión(n1,n2);
+
+        // Creamos un procedimiento para llamar a las funciones
+        function Calcular(){
+            if (document.getElementById("txtN1").value==""){
+                alert("Ingrese el numero 1");
+                document.getElementById("txtN1").focus();
+            }else if (document.getElementById("txtN2").value==""){
+                alert("Ingrese el numero 2");
+                document.getElementById("txtN2").focus();
+            }else{
+                // Definiendo e Inicializando variables
+                var n1=0, n2=0, sum=0, res=0, mul=0, div=0;
+                // Capturando valores
+                n1=parseFloat(document.getElementById("txtN1").value);
+                n2=parseFloat(document.getElementById("txtN2").value);
+                // Llamando a las funciones para calcular
+                sum=CalculaSuma(n1,n2);
+                res=CalculaResta(n1,n2);
+                mul=CalculaMultiplicación(n1,n2);
+                div=CalculaDivisión(n1,n2);
+                // Mostrando resultados
+                document.getElementById("txtSum").value=sum;
+                document.getElementById("txtRes").value=res;
+                document.getElementById("txtMul").value=mul;
+                document.getElementById("txtDiv").value=div;
+            }
+        }
+    </script>
+    </div>
+</head>
+<body>
+    
+    <form action="">
+        <label for="txtN1">Numero 1 Precio:</label>
+        <input type="text" name="txtN1" id="txtN1"><br>
+        <label for="txtN4">Numero 2 Precio:</label>
+        <input type="text" name="txtN2" id="txtN2"><br>
+        <label for="txtSum">Suma Resultado:</label>
+        <input type="text" name="txtSum" id="txtSum"><br>
+        <label for="txtRes">Resta Resultado:</label>
+        <input type="text" name="txtRes" id="txtRes"><br>
+        <label for="txtMul">Multiplicacion:</label>
+        <input type="text" name="txtMul" id="txtMul"><br>
+        <input type="text" name="txtDiv" id="txtDiv"><br>
+        <input type="button" onclick="Calcular()" name="btnCalcular" id="btnCalcular" value="Calcular"> 
+        <input type="reset" name="btnLimpiar" id="btnLimpiar" value="Limpiar"> 
+    </form>
+  </head>
+  <body>
+    <div class="contenedor">
+    <!-- inicia la seccion principal -->
+      <section>
+        <h1>ROPA CASUAL</h1>
+          <!-- inicia imagen -->
+          <div align=center>
+            <h2>Informacion sobre el producto </h2>
+            <img src="img/1pro.jpeg" width="350" height="350alt="Imagen Principal"  border="6">
+        </div>
+          <!-- fin de la imagen -->
+      <!-- inicia la seccion principal -->
+      <section>
+        <!-- inica articulo -->
+        <article>
+            <p><h2 align=center>Ropa Casual
+              Tamaño de la Chompa : XL<br>
+              Tamaño del Pantalon : L<br>
+            Color : Chompa Blanca y Pantalon Negro<br>
+            Oferta :Compra 1 chompa Nike y llevate a 60% descuento en pantalon Nike<br>
+            Precio Total :s/.54.30<br>
+            
+            </p>
+          </h2>
+        </article>
+        <hr>
+        <!-- fin del arcticulo -->
+    </section>
+    <!-- fin de la seccion principal -->
+        </section>
+      <!-- fin de la seccion principal -->
+      <!-- inicia la Anuncios -->
+      <aside>
+          <div align=center>
+            <h3>Informacion sobre el producto </h3>
+                <img src="img/img 3.jpeg" width="350" height="350" alt="Imagen Principal" border="6"> 
+            <div class="Informacionsobreelproducto">
+            <p><h2 align=center>Ropa Casual
+            Marca:Adidas<br>
+            Tamaño del Polo:L<br>
+                Tamaña del  Short: L<br>
+                Tipo de Color:Negro<br>
+                polo :Plomo (con rayas naranjas y negras ) <br>
+                short:Negro S<br>
+                Precio: <br>
+                polo : s/15.50<br>
+                Short: s/22.00<br>
+                    oferta : llevate los 2 a tan solo s/.34.00<br>
+          </p>
+        </h2>
+            </div>
+          <hr>
+          </aside>
+      <div>
+          </div>
+          <div align=center>
+            <h3>Informacion sobre el producto </h3>
+            <img src="img/img2).jpeg" width="350" height="350"  alt="Imagen Principal" border="6"> 
+              <h2 align=center>
+            <p> Casual(Chompa de Invierno Manga larga )<br>
+              Marca:Adidas<br>
+              Tamaño: Chompa:XL<br>
+              Color:<br>
+                Verde Oscuro con franjas rojas <br>
+            Precio:s/.28.20 <br>
+            Si paga con la tarjeta OH , tendra un descuento del 15%<br>  
+          </h2>
+          </p>
+        <hr>
+            <div align=center>
+              <h3>Informacion sobre la prenda </h3>
+                <img src="img/polo.jpeg" width="350" height="350"  alt="Imagen Principal" border="6">
+                <div class="Informacionsobreelproducto">
+                  <h2 align=center>
+                <p>Ropa Casual (Polo temporada de otoño manga Larga)<br>
+                    Marca:Tommy Hilfiger<br>
+                    Tamaño:S<br>
+                    Color:Negro<br>
+                    Precio:s/.20.20<br>
+                    Oferton : si pagas con visa llevate el %50 de descuento <br>
+                  </h2>
+                  </p>
+                </div>
+                </div> 
+            </div>
+            <div align=center>
+              <hr>
+              <h3>Informacion sobre la prenda de vestir </h3>
+                <img src="img/casaca.jpeg " width="350" height="350" alt="Imagen Principal" border="6">
+                <h2 align=center>
+                <p>Casual (Casaca Jean con Capucha temporada de invierno ) <br>
+                Marca:LEVIS <br>
+                Tamaño:XL <br>
+                Color: <br>
+                Casaca Jean: celeste oscuro , con pequeños rasgos de verde pantano <br>
+                Capucha:Blanca con un toque de plomo <br>
+                Precio:s/.65.40 <br>
+                Oferta de descuento su pagas con tarjeta MASTER CARD de 10% <br>
+              </h2>
+              </p>
+            </div>
+            
+      <!-- fin  de Anuncios -->
+      <!-- inica el pie -->
+    <footer>
+       
+    </footer>
+    <!-- fin del pie -->
+</div>
+<!-- fin del contenedor -->
+</div>
+<p align="center"><a href="pagina3.html">Regresar</a></p>
+</body>
+</html>

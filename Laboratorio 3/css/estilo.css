@@ -1,0 +1,32 @@
+/* esto es un comentario en CSS */
+/* Aplicaremos un estilo para darle un color de fondo a la pagina */
+body {
+  background-color: thistle;
+}
+/* Aplicamos colores a cada una de las secciones de la pagina */
+#contenedor {
+  background-color: rgb(156, 223, 206);
+}
+#cabecera {
+  background-color: rgb(240, 195, 166);
+}
+#menu {
+  background-color: rgba(144, 238, 144, 0.719);
+}
+
+#cuerpo {
+  background-color: rgb(177, 208, 238);
+}
+
+#pie {
+  background-color: palegoldenrod;
+}
+/*Agregamos una imagen de fondo a um parrafo*/
+#parrafoimagen {
+  background-image: url("/img/descarga(9).jpg");
+}
+/*Agregamos un color de fondo con transparencia para los parrafos*/
+.parrafotransparencia {
+  background-color: rgb(155, 144, 226);
+  opacity: 75%;
+}
